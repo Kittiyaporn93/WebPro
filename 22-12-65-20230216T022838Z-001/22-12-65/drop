@@ -1,0 +1,59 @@
+echo "<p>";
+    echo "<b>ข้อมูลผู้ใช้ใส่มา </b><br />";
+    echo "รหัสนักศึกษา : <i> $idstudent </i> <br/>";
+    echo "ชื่อ-นามสกุลนักศึกษา : <i> $name </i> <br/>";
+    echo "รหัสผ่าน : <i> $password </i> <br/>";
+    echo "เพศ : <i> $sex </i> <br/>";
+
+    echo 'งานอดิเรก : ';
+    if (!empty($_POST['Box1']))
+        echo $_POST['Box1'];
+    if (!empty($_POST['Box2']))
+        echo ', ' . $_POST['Box2'];
+    if (!empty($_POST['Box3']))
+        echo ', ' . $_POST['Box3']; 
+
+    echo'<br/> สี : <br/>';
+    for($i=0;$i<count($_POST["ckhcolor"]);$i++)
+    {
+        if(trim($_POST["ckhcolor"][$i]) != "")
+        {
+            echo "ckhcolor $i = ".$_POST["ckhcolor"][$i]."</br>";
+        }
+    }
+    ?> 
+    ?php
+     $num1=$_POST['num1'];
+     $num2=$_POST['num2'];
+     $sum=$num1*$num2;
+    echo "สีเหลี่ยมผืนผ้า".$sum </br>;
+     ?>
+
+
+
+$num1 = $_POST['num1'];
+    $num2 = $_POST['num2'];
+    $Box = $_POST['Box'];
+    echo "num1 : <i> $num1</i> <br/>";
+    echo "num2 : <i> $num2</i> <br/>";
+    echo "Box : <i> $Box</i> <br/>";
+    if($Box == "square")echo($num1*$num2)." </i> <br/>";
+    if($Box == "rectangle")echo($num1*$num2)." </i> <br/>";
+    if($Box == "rhombus")echo($num1*$num2)." </i> <br/>";
+    if($Box == "square")echo($num1*$num2/2)." </i> <br/>";
+
+ function rectangle($number1, $number2)
+    {
+        $result = $number1 * $number2;
+        echo "result : " . $result . "<br>";
+    }
+    function rhombus($number1, $number2)
+    {
+        $result = $number1 * $number2;
+        echo "result : " . $result . "<br>";
+    }
+    function triangle($number1, $number2)
+    {
+        $result = 1 / 2 * $number1 * $number2;
+        echo "result : " . $result . "<br>";
+    }
