@@ -29,7 +29,7 @@
                 </td>
             </tr>
             <td> อีเมล :
-            <td><input type="text" name="email" size="25" value="" /></td>
+            <td><input type="text" name="email" size="25" value="" placeholder="E-mail"/></td>
             </tr>
             </tr>
             <td> หมายเลขโทรศัพท์ :
