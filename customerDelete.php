@@ -17,6 +17,10 @@
     if (!$conn)
         die("ไม่สารมารถติดต่อกับ MySQL ได้" );
         mysqli_select_db($conn, $dbName) or die("ไม่สามารถล็อกฐานข้อมูล bookstroe ได้ ");
+    $sql = "delete from customer where customerID = '$customerID'";
+    mysqli_query($conn, $sql) or die ("Delete จากตาราง customer มีข้อผิดพลาดเกิดขึ้น".mysql_error());
+    mysqli_close($conn);
+    header("location:costumer.php");
     ?>
 </body>
 </html>
